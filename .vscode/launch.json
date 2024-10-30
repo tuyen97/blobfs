@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/zig-out/bin/blob-storage.exe",
+            "args": ["1"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "preLaunchTask": "build"
+        }
+    ]
+}

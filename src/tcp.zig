@@ -4,9 +4,9 @@ const posix = std.posix;
 
 pub const Server = struct {
     stream_server: net.Server,
-    gpa: std.heap.HeapAllocator,
+    gpa: std.mem.Allocator,
 
-    pub fn init(port: u16) !Server {
+    pub fn init(port: u16) Server {
         const address = net.Address.initIp4([4]u8{ 127, 0, 0, 1 }, port);
 
         // more information about `reuse_address`: http://unixguide.net/network/socketfaq/4.5.shtml
